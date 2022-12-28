@@ -4,7 +4,7 @@
     <div class="nav-list">
       <ul class="d-flex flex-wrap">
         <li class="mx-4 p-2">
-          <strong>{{ currentUser }}-{{ $store.state.isAuth }}</strong>
+          <strong>{{ currentUser }}</strong>
         </li>
         <li class="mx-4 p-2 logout-btn" @click="logOut">LogOut</li>
       </ul>
@@ -14,6 +14,7 @@
 
 <script>
 import { mapMutations } from "vuex";
+
 export default {
   name: "NavBar",
   methods: {
@@ -27,7 +28,10 @@ export default {
   computed: {
     currentUser() {
       let user = Meteor.user();
-      return `${user.username} (${user.emails[0].address})`;
+      if (user && user.username && user.emails && user.emails[0]) {
+        return `${user.username} (${user.emails[0].address})`;
+      }
+      return "Loading...";
     },
   },
 };
