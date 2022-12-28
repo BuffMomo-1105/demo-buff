@@ -1,6 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import { Meteor } from "meteor/meteor";
+import store from "../store";
 
 Vue.use(VueRouter);
 const routes = [
@@ -47,8 +47,8 @@ const router = new VueRouter({
   routes,
 });
 router.beforeEach((to, from, next) => {
-  let currentUser = Meteor.user() ? true : false;
-  if (to.meta.requiresAuth && !currentUser) {
+  let isAuth = store.state.isAuth;
+  if (to.meta.requiresAuth && !isAuth) {
     next({ name: "Login" });
   } else {
     next();

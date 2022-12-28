@@ -16,12 +16,16 @@ import "../imports/ui/utils/validator";
 import "../imports/ui/utils/components";
 import "../imports/ui/utils/global";
 
+//store
+import store from "../imports/ui/store";
+
 Meteor.startup(() => {
   Vue.use(VueMeteorTracker);
   Vue.use(BootstrapVue);
   Vue.use(BootstrapVueIcons);
   new Vue({
     router,
+    store,
     render: (h) => h(App),
   }).$mount("#app");
 });

@@ -5,7 +5,8 @@
     :title="modalTitle"
     size="lg"
     hide-footer
-    @hide="updateDetail(currentContact)"
+    no-close-on-backdrop
+    @close="onModalClose"
   >
     <ValidationObserver ref="observer" v-slot="{ handleSubmit }">
       <form
@@ -18,7 +19,7 @@
           labelName="First Name"
           inputName="text"
           formGroupClass="form-group col-xxl-6 col-lg-6 col-md-6 mb-3"
-          placeholder="Enter First name"
+          placeholder="Enter First Name"
           :vmodel.sync="form.first_name"
         />
         <input-text
@@ -27,7 +28,7 @@
           labelName="Last Name"
           inputName="text"
           formGroupClass="form-group col-xxl-6 col-lg-6 col-md-6 mb-3"
-          placeholder="Enter Last ame"
+          placeholder="Enter Last Name"
           :vmodel.sync="form.last_name"
         />
         <input-text
@@ -37,7 +38,7 @@
           inputName="email"
           inputType="email"
           formGroupClass="form-group col-xxl-6 col-lg-6 col-md-6 mb-3"
-          placeholder="Enter email"
+          placeholder="Enter Email"
           :vmodel.sync="form.email"
         />
         <input-text
@@ -47,7 +48,7 @@
           inputName="phone"
           inputType="text"
           formGroupClass="form-group col-xxl-6 col-lg-6 col-md-6 mb-3"
-          placeholder="Enter phone"
+          placeholder="Enter Phone"
           :vmodel.sync="form.phone"
         />
         <input-select
@@ -156,6 +157,11 @@ export default {
     },
   },
   methods: {
+    onModalClose() {
+      if (!this.contact_id) {
+        this.form = { ...contact };
+      }
+    },
     updateDetail(val) {
       if (val) {
         this.form = val;
@@ -199,7 +205,7 @@ export default {
     currentContact: {
       deep: true,
       handler(val) {
-        this.updateDetail();
+        this.updateDetail(val);
       },
     },
   },

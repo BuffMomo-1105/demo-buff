@@ -58,6 +58,7 @@
   </div>
 </template>
 <script>
+import { mapMutations } from "vuex";
 export default {
   name: "LoginPage",
   data() {
@@ -71,6 +72,7 @@ export default {
   },
   mounted() {},
   methods: {
+    ...mapMutations(["updateAuthState"]),
     handleLogin() {
       this.loginLoader = true;
       Meteor.loginWithPassword(
@@ -81,6 +83,7 @@ export default {
             this.$notify(err.reason, "error");
           } else {
             this.$notify("Log in successfully.");
+            this.$store.commit("updateAuthState", true);
             this.$router.push("/");
           }
           this.loginLoader = false;
