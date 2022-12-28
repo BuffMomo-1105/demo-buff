@@ -18,20 +18,22 @@ import { mapMutations } from "vuex";
 export default {
   name: "NavBar",
   methods: {
-    ...mapMutations(["updateAuthState"]),
+    ...mapMutations(["updateAuthState", "updateUserState"]),
     logOut() {
       Meteor.logout();
       this.$store.commit("updateAuthState", false);
+      this.$store.commit("updateUserState", null);
       this.$router.push("/login");
     },
   },
   computed: {
     currentUser() {
-      let user = Meteor.user();
-      if (user && user.username && user.emails && user.emails[0]) {
+      let user = this.$store.getters.userGetter;
+      if (user) {
         return `${user.username} (${user.emails[0].address})`;
+      } else {
+        return "loading...";
       }
-      return "Loading...";
     },
   },
 };

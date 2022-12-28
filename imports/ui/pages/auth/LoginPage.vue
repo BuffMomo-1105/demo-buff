@@ -72,7 +72,7 @@ export default {
   },
   mounted() {},
   methods: {
-    ...mapMutations(["updateAuthState"]),
+    ...mapMutations(["updateAuthState", "updateUserState"]),
     handleLogin() {
       this.loginLoader = true;
       Meteor.loginWithPassword(
@@ -83,7 +83,9 @@ export default {
             this.$notify(err.reason, "error");
           } else {
             this.$notify("Log in successfully.");
+            let user = Meteor.user();
             this.$store.commit("updateAuthState", true);
+            this.$store.commit("updateUserState", user);
             this.$router.push("/");
           }
           this.loginLoader = false;
