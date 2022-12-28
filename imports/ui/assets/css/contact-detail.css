@@ -1,0 +1,78 @@
+.memberDetail_wrap {
+  background: #f7fafc;
+  width: 100%;
+}
+.member_details .title h1 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #2c3f58;
+  margin-bottom: 2rem;
+}
+.memberInformation {
+  background: #ffffff;
+  box-shadow: 0 0 20px rgb(199 210 219 / 35%);
+  border-radius: 10px;
+  padding: 25px;
+  position: relative;
+  width: 45%;
+  margin: auto;
+}
+
+.memberInformation h2,
+.memberInformation h3 {
+  font-size: 2.5rem;
+  color: #323c47;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+.light-bg {
+  background: #f7fafc;
+  padding: 15px 10px;
+  border-radius: 8px;
+  margin-top: 1rem;
+  position: relative;
+}
+.memberDetail_lists ul {
+  font-size: 13px;
+  font-weight: 500;
+  list-style: none;
+  line-height: 27px;
+  color: #666;
+  text-align: left;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+.memberDetail_lists ul li {
+  display: flex;
+}
+.memberDetail_lists li span {
+  width: 50%;
+}
+.memberInformation .memberCntc {
+  display: block;
+  color: #666;
+  margin-bottom: 5px;
+}
+.memberInformation .memberCntc .fas {
+  margin-right: 8px;
+}
+.memberDetail_lists h4,
+.memberInformation h4 {
+  font-size: 16px;
+  color: #323c47;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .memberDetail_lists ul {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 850px) {
+  .memberInformation {
+    width: auto;
+    margin: auto;
+  }
+}

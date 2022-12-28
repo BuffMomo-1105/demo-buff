@@ -1,0 +1,96 @@
+.page-card {
+  background: #fff;
+  box-shadow: 0 2px 15px rgb(216 227 235 / 33%);
+  border-radius: 10px;
+  padding: 2rem;
+  margin-top: 1.5rem;
+  font-size: 14px;
+}
+.page-card table tr th {
+  border-bottom: 0 !important;
+  background: #fafbfd;
+}
+.page-card table tr td,
+.page-card table tr th {
+  border: 1px solid #d7e1ea;
+  padding: 12px;
+  vertical-align: middle;
+}
+.page-card table tr:nth-child(even) {
+  background: #fafbfd;
+}
+.action-icons a {
+  background: transparent linear-gradient(180deg, #0cf, #1597b8 49%, #0567bc);
+  border-radius: 50px;
+  width: 27px;
+  height: 27px;
+  color: #fff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 8px;
+}
+
+.add-btn,
+.add-btn:focus {
+  background: linear-gradient(#0cf, #1597b8 49%, #0567bc);
+  border-radius: 6px;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border: 0px;
+  outline: none;
+  font-size: 14px;
+  transition: all ease 0.6s;
+  box-shadow: inherit;
+}
+.add-btn:hover {
+  transition: all ease 0.6s;
+  box-shadow: 0px 8px 20px -13px rgb(0 0 0 / 69%);
+}
+@media (max-width: 1400px) {
+  .add-btn,
+  .add-btn:focus,
+  .page-card {
+    font-size: 13px;
+  }
+  .page-card {
+    padding: 1.5rem;
+  }
+  .action-icons a {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.action-icons a {
+  background: transparent linear-gradient(180deg, #0cf, #1597b8 49%, #0567bc);
+  border-radius: 50px;
+  width: 27px;
+  height: 27px;
+  color: #fff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 8px;
+}
+
+@media (max-width: 1400px) {
+  .page-wrap label,
+  .page-field,
+  .page-wrap .univ-btn,
+  .clientsData-wrap .table {
+    font-size: 13px;
+  }
+  .action-icons a {
+    width: 24px;
+    height: 24px;
+  }
+  .member-card {
+    padding: 1.5rem;
+  }
+  .clientsData-wrap,
+  .page-wrap {
+    padding: 0;
+  }
+}

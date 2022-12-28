@@ -1,0 +1,135 @@
+.authWrapper {
+  background: transparent
+    linear-gradient(180deg, #00ccff 0%, #1597b8 49%, #0567bc 100%) 0% 0%
+    no-repeat padding-box;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.whiteBG-wrap {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 25px 30px rgba(0, 0, 0, 16%);
+  overflow: hidden;
+  margin: 2rem 15px;
+}
+.no-padding {
+  padding: 0;
+}
+.left-bg-wrapper {
+  background: #0cf;
+  height: 100%;
+  background-size: cover;
+  padding: 0 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+}
+.left-bg-wrapper h1 {
+  font-size: 45px;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+.left-bg-wrapper p {
+  line-height: 30px;
+  font-size: 18px;
+}
+.auth-form {
+  padding: 5rem 4rem 2rem 4rem;
+}
+.login-form,
+.signup-form {
+  padding-top: 5rem;
+}
+.auth-form-wrap {
+  padding: 4rem;
+}
+.auth-linkBtn a {
+  padding: 8px 24px;
+  font-size: 14px;
+  border: 1px solid #00ccfe;
+  border-radius: 6px;
+  color: #00ccff;
+  font-weight: 600;
+  margin-left: 15px;
+  display: inline-block;
+  min-width: 100px;
+  text-align: center;
+  transition: all ease 0.6s;
+}
+.auth-linkBtn a:hover,
+.auth-linkBtn .router-link-exact-active.router-link-active {
+  background: #0ab9e4;
+  border: 1px solid #0ab9e4;
+  color: #fff;
+  transition: all ease 0.6s;
+}
+.auth-form h2 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #0cf;
+  margin-bottom: 2rem;
+}
+.signup-form .auth-form h2 {
+  margin-bottom: 1rem;
+}
+.signup-form .auth-form p {
+  font-size: 14px;
+  color: #323c47;
+  line-height: 25px;
+  margin-bottom: 1.5rem;
+}
+.auth-form label {
+  font-size: 16px;
+  color: #909090;
+  margin-bottom: 10px;
+}
+.auth-form .auth-form-input {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 14px;
+  padding: 12px 15px;
+  border-radius: 4px;
+  outline: none;
+}
+.auth-form .auth-form-input:focus {
+  box-shadow: inherit;
+  border: 1px solid #0cf;
+}
+.auth-form button.submit-btn {
+  width: 100%;
+  border: 0;
+  background: #0cf;
+  color: #fff;
+  padding: 13px;
+  font-weight: 600;
+  border-radius: 6px;
+  outline: none;
+  transition: all ease 0.6s;
+}
+.auth-form button.submit-btn:hover {
+  background: #0ab9e4;
+  color: #fff;
+  transition: all ease 0.6s;
+}
+@media (max-width: 1366px) {
+  .auth-form {
+    padding: 5rem 0 2rem 0;
+  }
+}
+@media (max-width: 992px) {
+  .auth-form-wrap {
+    padding: 2rem;
+  }
+  .left-bg-wrapper {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 778px) {
+  .form-group {
+    display: inline !important;
+  }
+}

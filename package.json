@@ -1,0 +1,30 @@
+{
+  "name": "crm-demo",
+  "private": true,
+  "scripts": {
+    "start": "meteor run",
+    "test": "meteor test --once --driver-package meteortesting:mocha",
+    "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
+    "visualize": "meteor --production --extra-packages bundle-visualizer"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.17.9",
+    "bootstrap": "^4.6.0",
+    "bootstrap-vue": "^2.23.1",
+    "meteor-node-stubs": "^1.2.1",
+    "vee-validate": "^3.4.14",
+    "vue": "2.6.11",
+    "vue-meteor-tracker": "^2.0.0-beta.5",
+    "vue-router": "^3.6.5",
+    "vue-template-compiler": "2.6.11",
+    "vue-toast-notification": "^0.6.2",
+    "vue2-datepicker": "^3.9.1"
+  },
+  "meteor": {
+    "mainModule": {
+      "client": "client/main.js",
+      "server": "server/main.js"
+    },
+    "testModule": "tests/main.js"
+  }
+}
