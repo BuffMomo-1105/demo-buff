@@ -194,6 +194,7 @@ export default {
             this.$notify(err.error, "error");
           } else {
             this.$notify("New Contact Added successfully.");
+            this.form = { ...contact };
           }
           this.showLoader = false;
           this.$bvModal.hide("add-contact");
